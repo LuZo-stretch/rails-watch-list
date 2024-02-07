@@ -5,9 +5,9 @@
   </div>
   <div class="row">
     <% @lists.each do |list| %>
-    <div class="col-4">
+    <div class="col-4 my-3">
       <div class="category" style="background-image: url('<%= list.image %>');">
-        <span class="category-name"><%= list.name %></span>
+        <a class="category-name"><%= link_to list.name, list_path(list) %></a>
       </div>
     </div>
     <% end %>

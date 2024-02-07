@@ -14,6 +14,10 @@ class ListsController < ApplicationController
   end
 
   def show
+    @list = List.find(params[:id])
+    @movies_count = @list.movies.size
+    @bookmarks = @list.bookmarks
+    @bookmark = Bookmark.new
   end
 
   private
